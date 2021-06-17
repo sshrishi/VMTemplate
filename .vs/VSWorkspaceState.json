@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\az1vm-ue2prod-airflow01",
+    "\\az1vm-ue2prod-app01",
+    "\\az1vm-ue2prod-app02",
+    "\\az1vm-ue2prod-app03",
+    "\\az1vm-ue2prod-inet01",
+    "\\az1vm-ue2prod-inet02",
+    "\\az1vm-ue2prod-ops01",
+    "\\az1vm-ue2prod-web01",
+    "\\az1vm-ue2prod-web02"
+  ],
+  "SelectedNode": "\\az1vm-ue2prod-airflow01\\parameters.json",
+  "PreviewInSolutionExplorer": false
+}
