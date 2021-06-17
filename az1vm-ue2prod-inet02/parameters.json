@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus2"
+        },
+        "networkInterfaceName": {
+            "value": "az1vm-ue2prod-inet02343"
+        },
+        "networkSecurityGroupName": {
+            "value": "az1vm-ue2prod-inet02-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "Rgs-Mgmt-Subnet"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/a8bf8bf4-87e4-4b77-99aa-628e5d1ab6b2/resourceGroups/rgs_rg_AZ1Prod/providers/Microsoft.Network/virtualNetworks/rgs_Vnet"
+        },
+        "publicIpAddressName": {
+            "value": "az1vm-ue2prod-inet02-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Static"
+        },
+        "publicIpAddressSku": {
+            "value": "Standard"
+        },
+        "virtualMachineName": {
+            "value": "az1vm-ue2prod-inet02"
+        },
+        "virtualMachineComputerName": {
+            "value": "az1vm-ue2prod-inet02"
+        },
+        "virtualMachineRG": {
+            "value": "rgs_rg_AZ1Prod"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_DS1_v2"
+        },
+        "adminUsername": {
+            "value": "azureuser"
+        },
+        "adminPublicKey": {
+            "value": null
+        },
+        "zone": {
+            "value": "2"
+        }
+    }
+}
