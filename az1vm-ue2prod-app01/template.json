@@ -75,8 +75,7 @@
             "apiVersion": "2018-10-01",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[concat('Microsoft.Network/networkSecurityGroups/', parameters('networkSecurityGroupName'))]",
-                "[concat('Microsoft.Network/publicIpAddresses/', parameters('publicIpAddressName'))]"
+                "[concat('Microsoft.Network/networkSecurityGroups/', parameters('networkSecurityGroupName'))]"
             ],
             "properties": {
                 "ipConfigurations": [
@@ -87,10 +86,7 @@
                           "id": "[variables('subnetRef')]"
                         },
                         "privateIPAllocationMethod": "Static",
-                        "privateIPAddress": "10.230.34.71",
-                        "publicIpAddress": {
-                          "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]"
-                        }
+                        "privateIPAddress": "10.230.34.71"
                       }
                     }
                 ],
