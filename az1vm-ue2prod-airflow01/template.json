@@ -73,15 +73,16 @@
                 "ipConfigurations": [
                     {
                         "name": "ipconfig1",
-                        "properties": {
-                            "subnet": {
-                                "id": "[variables('subnetRef')]"
-                            },
-                            "privateIPAllocationMethod": "Dynamic",
-                            "publicIpAddress": {
-                                "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]"
-                            }
+                      "properties": {
+                        "subnet": {
+                          "id": "[variables('subnetRef')]"
+                        },
+                        "privateIPAllocationMethod": "Static",
+                        "privateIPAddress": "10.230.34.74",
+                        "publicIpAddress": {
+                          "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]"
                         }
+                      }
                     }
                 ],
                 "networkSecurityGroup": {

@@ -29,19 +29,10 @@
             ]
         },
         "subnetName": {
-            "value": "RGS_MGMT_Subnet"
+            "value": "RGS_DMZ_Subnet"
         },
         "virtualNetworkId": {
             "value": "/subscriptions/75d14dc0-8be0-47da-8898-4f85d5c42265/resourceGroups/AZ1ProdRG/providers/Microsoft.Network/virtualNetworks/AZ1Prod_VNet"
-        },
-        "publicIpAddressName": {
-            "value": "az1vm-ue2prod-xfer01-ip"
-        },
-        "publicIpAddressType": {
-            "value": "Static"
-        },
-        "publicIpAddressSku": {
-            "value": "Standard"
         },
         "virtualMachineName": {
             "value": "az1vm-ue2prod-xfer01"

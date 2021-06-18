@@ -1,103 +1,94 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-        "location": {
-            "value": "eastus2"
-        },
-        "networkInterfaceName": {
-            "value": "az1vm-ue2prod-app01969"
-        },
-        "enableAcceleratedNetworking": {
-            "value": true
-        },
-        "networkSecurityGroupName": {
-            "value": "az1vm-ue2prod-app01-nsg"
-        },
-        "networkSecurityGroupRules": {
-            "value": [
-                {
-                    "name": "SSH",
-                    "properties": {
-                        "priority": 300,
-                        "protocol": "TCP",
-                        "access": "Allow",
-                        "direction": "Inbound",
-                        "sourceAddressPrefix": "*",
-                        "sourcePortRange": "*",
-                        "destinationAddressPrefix": "*",
-                        "destinationPortRange": "22"
-                    }
-                }
-            ]
-        },
-        "subnetName": {
-            "value": "Rgs-App-Subnet"
-        },
-        "virtualNetworkId": {
-            "value": "/subscriptions/a8bf8bf4-87e4-4b77-99aa-628e5d1ab6b2/resourceGroups/rgs_rg_AZ1Prod/providers/Microsoft.Network/virtualNetworks/rgs_Vnet"
-        },
-        "publicIpAddressName": {
-            "value": "az1vm-ue2prod-app01-ip"
-        },
-        "publicIpAddressType": {
-            "value": "Static"
-        },
-        "publicIpAddressSku": {
-            "value": "Standard"
-        },
-        "virtualMachineName": {
-            "value": "az1vm-ue2prod-app01"
-        },
-        "virtualMachineComputerName": {
-            "value": "az1vm-ue2prod-app01"
-        },
-        "virtualMachineRG": {
-            "value": "rgs_rg_AZ1Prod"
-        },
-        "osDiskType": {
-            "value": "StandardSSD_LRS"
-        },
-        "dataDisks": {
-            "value": [
-                {
-                    "lun": 0,
-                    "createOption": "attach",
-                    "caching": "ReadWrite",
-                    "writeAcceleratorEnabled": false,
-                    "id": null,
-                    "name": "az1vm-ue2prod-app01_DataDisk_0",
-                    "storageAccountType": null,
-                    "diskSizeGB": null,
-                    "diskEncryptionSet": null
-                }
-            ]
-        },
-        "dataDiskResources": {
-            "value": [
-                {
-                    "name": "az1vm-ue2prod-app01_DataDisk_0",
-                    "sku": "StandardSSD_LRS",
-                    "properties": {
-                        "diskSizeGB": 512,
-                        "creationData": {
-                            "createOption": "empty"
-                        }
-                    }
-                }
-            ]
-        },
-        "virtualMachineSize": {
-            "value": "Standard_D4s_v3"
-        },
-        "adminUsername": {
-            "value": "azureuser"
-        },
-        "adminPublicKey": {
-            "value": null
-        },
-        "zone": {
-            "value": "1"
+  "parameters": {
+    "location": {
+      "value": "eastus2"
+    },
+    "networkInterfaceName": {
+      "value": "az1vm-ue2prod-app01969"
+    },
+    "enableAcceleratedNetworking": {
+      "value": true
+    },
+    "networkSecurityGroupName": {
+      "value": "az1vm-ue2prod-app01-nsg"
+    },
+    "networkSecurityGroupRules": {
+      "value": [
+        {
+          "name": "SSH",
+          "properties": {
+            "priority": 300,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "22"
+          }
         }
+      ]
+    },
+    "subnetName": {
+      "value": "RGS_APP_Subnet"
+    },
+    "virtualNetworkId": {
+      "value": "/subscriptions/75d14dc0-8be0-47da-8898-4f85d5c42265/resourceGroups/AZ1ProdRG/providers/Microsoft.Network/virtualNetworks/AZ1Prod_VNet"
+    },
+    "virtualMachineName": {
+      "value": "az1vm-ue2prod-app01"
+    },
+    "virtualMachineComputerName": {
+      "value": "az1vm-ue2prod-app01"
+    },
+    "virtualMachineRG": {
+      "value": "rgs_rg_AZ1Prod"
+    },
+    "osDiskType": {
+      "value": "StandardSSD_LRS"
+    },
+    "dataDisks": {
+      "value": [
+        {
+          "lun": 0,
+          "createOption": "attach",
+          "caching": "ReadWrite",
+          "writeAcceleratorEnabled": false,
+          "id": null,
+          "name": "az1vm-ue2prod-app01_DataDisk_0",
+          "storageAccountType": null,
+          "diskSizeGB": null,
+          "diskEncryptionSet": null
+        }
+      ]
+    },
+    "dataDiskResources": {
+      "value": [
+        {
+          "name": "az1vm-ue2prod-app01_DataDisk_0",
+          "sku": "StandardSSD_LRS",
+          "properties": {
+            "diskSizeGB": 512,
+            "creationData": {
+              "createOption": "empty"
+            }
+          }
+        }
+      ]
+    },
+    "virtualMachineSize": {
+      "value": "Standard_D4s_v3"
+    },
+    "adminUsername": {
+      "value": "azureuser"
+    },
+    "adminPublicKey": {
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCw+IseiTgi2Mev+ZDGt5EcIFz0AMcguEC+aYDorKbzo54ChtogNQnAfSPa5wo0BxeH1Ju0uR0+P/7t30J1WpYs0WO5THOcerXws3lK16x7NZseayvUaV6QzYDCbEJyZj40B7dZ2xrTvVbJU/aaf7eMEeIrzE3ZTTgOJlczvXxQYNK0Qk0vRpNoLlF4iUMTCVWzT+2HRN35bNH5aAeBiPJfJ7Q2MQLRLv4Uftmrii+YjvoC3x8tLI2SLrLEGsp/2UYxd4lanCN+RxnzSVxBwS7h/gIFyxVA4TXY4KgvtmJ8Ucfx3PQ2TU5QgKmgn2kwDIGhMxFUW1DAqRXIq3FpJMKoZCjC85MuYyGcKFnr5lUdP8U1znylL2KmbOk5arkzc2HuYFg2OosS5M/s+kav7LJy6z+qsyvqUMQvNMaU9HvQxMHY0QRwsO9zd9IUvMXuBzatuUT8pGH632Jxmbz0oC1yoyGpF2epSogktYLnLBEamVb1wg79QmBwv1cApBoscts= generated-by-azure"
+    },
+    "zone": {
+      "value": "1"
     }
+  }
 }
