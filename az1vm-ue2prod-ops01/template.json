@@ -87,7 +87,7 @@
                           "id": "[variables('subnetRef')]"
                         },
                         "privateIPAllocationMethod": "Static",
-                        "privateIPAddress": "10.230.34.137",
+                        "privateIPAddress": "10.230.34.133",
                         "publicIpAddress": {
                           "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]"
                         }
